@@ -1,0 +1,56 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "(gdb) Launch ex00",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "/home/kopalych/Campus/Projects/CPP-Module-09/ex00/btc",
+			"cwd": "/home/kopalych/Campus/Projects/CPP-Module-09/ex00/",
+			"preLaunchTask": "Build ex00",
+			"args": ["${input:ex00_argsInput}"],
+		},
+		{
+			"name": "(gdb) Launch ex01",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "/home/kopalych/Campus/Projects/CPP-Module-09/ex01/RPN",
+			"cwd": "/home/kopalych/Campus/Projects/CPP-Module-09/ex01/",
+			"preLaunchTask": "Build ex01",
+			"args": ["${input:ex01_argsInput}"],
+		},
+		{
+			"name": "(gdb) Launch ex02",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "/home/kopalych/Campus/Projects/CPP-Module-09/ex02/____",
+			"cwd": "/home/kopalych/Campus/Projects/CPP-Module-09/ex02/",
+			"preLaunchTask": "Build ex02",
+			// ...other settings...
+			// "args": ["${input:ex02_argsInput}"],
+		}
+	],
+	"inputs": [
+		{
+			"id": "ex00_argsInput",
+			"type": "promptString",
+			"description": "Please enter aguments for the program",
+			"default": ""
+		},
+		{
+			"id": "ex01_argsInput",
+			"type": "promptString",
+			"description": "Please enter aguments for the program",
+			"default": ""
+		},
+		// {
+		// 	"id": "ex02_argsInput",
+		// 	"type": "promptString",
+		// 	"description": "Please enter aguments for the program",
+		// 	"default": ""
+		// },
+	],
+}

@@ -1,0 +1,64 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build ex00",
+			"type": "shell",
+			"command": "make -C /home/kopalych/Campus/Projects/CPP-Module-09/ex00/"
+		},
+		{
+			"label": "Build ex01",
+			"type": "shell",
+			"command": "make -C /home/kopalych/Campus/Projects/CPP-Module-09/ex01/"
+		},
+		{
+			"label": "Build ex02",
+			"type": "shell",
+			"command": "make -C /home/kopalych/Campus/Projects/CPP-Module-09/ex02/"
+		},
+		// {
+		// 	"label": "Valgrind ex00",
+		// 	"type": "shell",
+		// 	"command": "valgrind --leak-check=full ./btc",
+		// 	"options": {
+		// 		"cwd": "${workspaceFolder}/ex00"
+		// 	},
+		// 	"dependsOn": ["Build ex00"],
+		// },
+		// {
+		// 	"label": "Valgrind ex01",
+		// 	"type": "shell",
+		// 	"command": "valgrind --leak-check=full ./RPN",
+		// 	"options": {
+		// 		"cwd": "${workspaceFolder}/ex01"
+		// 	},
+		// 	"dependsOn": ["Build ex01"]
+		// },
+		// {
+		// 	"label": "Valgrind ex02",
+		// 	"type": "shell",
+		// 	"command": "valgrind --leak-check=full ./____",
+		// 	"options": {
+		// 		"cwd": "${workspaceFolder}/ex02"
+		// 	},
+		// 	"dependsOn": ["Build ex02"]
+		// },
+	],
+	"compounds": [
+		{
+			"label": "Build and Debug ex00",
+			"dependsOn": ["Build ex00"],
+			"dependsOrder": "sequence"
+		},
+		{
+			"label": "Build and Debug ex01",
+			"dependsOn": ["Build ex01"],
+			"dependsOrder": "sequence"
+		},
+		{
+			"label": "Build and Debug ex02",
+			"dependsOn": ["Build ex02"],
+			"dependsOrder": "sequence"
+		},
+	],
+}
