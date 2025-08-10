@@ -6,21 +6,32 @@
 /*   By: akostian <akostian@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 23:09:52 by akostian          #+#    #+#             */
-/*   Updated: 2025/07/22 23:25:54 by akostian         ###   ########.fr       */
+/*   Updated: 2025/08/10 23:40:54 by akostian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RPN_HPP
-# define RPN_HPP
+#define RPN_HPP
 
-# include <stack>
+#include <cstring>
+#include <iostream>
+#include <stack>
 
-# include <cstring>
+#define ALLOWED_CHARS \
+	"+-*/"            \
+	"0123456789"
 
-# include <iostream>
+template <typename T>
+std::ostream& operator<<(std::ostream& os, std::stack<T> stack) {
+	os << '[';
+	while (!stack.empty()) {
+		std::cout << stack.top() << (stack.size() != 1 ? ", " : "");
+		stack.pop();
+	}
+	os << ']';
+	return os;
+}
 
-# define ALLOWED_CHARS "+-*/""0123456789"
+int solve(std::string input, double& result);
 
-int	solve(std::string input, int &result);
-
-#endif // RPN_HPP
+#endif  // RPN_HPP
